@@ -1,15 +1,4 @@
-
-<div class="navbar-lewagon" style="background-color: black;">
-  <div class="container" style="display: flex; justify-content: center;">
-    <%= cl_image_tag("neon_ssh5kd.gif", :transformation=>[
-      {:quality=>100, :height=>60, :crop=>"scale"},
-      {:angle=>18}
-    ]) %>
-  </div>
-</div>
-<div class="flex-container">
-  <%= simple_form_for([@cocktail]) do |f| %>
-      <%= f.input :name %>
-      <%= f.submit "Add a cocktail", class: "btn btn-secondary"%>
-  <% end %>
-</div>
+<%= simple_form_for([@cocktail]) do |f| %>
+    <%= f.input :name %>
+    <%= f.submit "Add a cocktail", class: "btn btn-secondary"%>
+<% end %>
