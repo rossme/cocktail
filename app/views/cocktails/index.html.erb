@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row pt-4">
+    <div class="jumbotron w-100">
+      <h1 class="display-4">Hero Banner</h1>
+      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <hr class="my-4">
+      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="cards" style="margin-top: 40px 30px;">
+        <% @cocktails.each do |cocktail| %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
+            <%= link_to cocktail.name, cocktail_path(cocktail)%>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+

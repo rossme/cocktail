@@ -1,0 +1,24 @@
+
+.offcanvas-header{ display:block; }
+
+.mobile-offcanvas {
+  visibility: hidden;
+  transform:translateX(-100%);
+  border-radius:0; 
+  display:block;
+  position: fixed;
+  top: 0; left:0;
+  height: 100%;
+  z-index: 1200;
+  width:70%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  transition: visibility .2s ease-in-out, transform .2s ease-in-out;
+}
+
+.mobile-offcanvas.show {
+  visibility: visible;
+  transform: translateX(0);
+  text-align: left;
+}
+
