@@ -1,0 +1,46 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <a class="navbar-brand" href="#">
+  <%= cl_image_tag("le_wagon_neon_black_new_vv6zhx.png") %>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon">
+    </span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/rossme" />
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Cocktail List<i class="fas fa-flask-poison"></i></a>
+          <a class="dropdown-item" href="#"></a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="container">
+  <div class="banner" style="margin-top: 80px;">
+    <%= cl_image_tag("le_cocktail_neon_eylbvn.gif") %>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="cards" style="margin-top: 40px 30px;">
+    <% @cocktails.each do |cocktail| %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
+      <%= link_to cocktail.name, cocktail_path(cocktail)%>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="footer" style="margin-top: 60px;">
+  <div class="footer-copyright">
+    <a href="https://github.com/rossme" target="_blank">Find me <i class="fab fa-github"></i> at Github</a>
+  </div>
+</div>
+
