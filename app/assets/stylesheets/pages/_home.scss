@@ -1,15 +1,16 @@
 // Specific CSS for your home-page
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:wght@300;400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
 body {
   margin: 0;
-  font-family: "Graphik-Regular", sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
   line-height: 1.5;
-  color: #555555;
+  color: #ffffff;
   text-align: left;
-  background-color: #white;
+  background: url('https://res.cloudinary.com/djnfnwxgu/image/upload/v1601755595/le_cocktail/cocktail_bar_logo_vcrj4f.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: black;
 }
 
 a {
