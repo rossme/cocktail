@@ -1,41 +1,31 @@
-
-.offcanvas-header{ display:block; }
+.offcanvas-header {
+  display:block;
+}
 
 .mobile-offcanvas {
-  visibility: hidden;
-  transform:translateX(-100%);
+  visibility: visible;
+  transform:translateY(-100%);
   border-radius:0; 
   display:block;
   position: fixed;
-  top: 0; left:0;
-  height: 100%;
+  top: 0; left: 0;
   z-index: 1200;
-  width:70%;
+  width: 100%;
+  height: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
-  transition: visibility .1s ease-in-out, transform .1s ease-in-out;
-  opacity: 0.94;
+  transition: visibility .2s ease-in-out, transform .2s ease-in-out;
 }
 
 .mobile-offcanvas.show {
   visibility: visible;
   transform: translateX(0);
-  text-align: left;
 }
 
 .navbar-toggler {
   border: none;
 }
 
-.navbar-brand {
-  margin-right: 0px;
-  padding: 0px;
-}
-
-.bg-dark {
-  background-color: black !important;
-}
-
-.links {
-  padding-top: 2rem;
+.bg-light {
+  background-color: white !important;
 }
