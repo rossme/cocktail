@@ -1,31 +1,33 @@
-.offcanvas-header {
-  display:block;
-}
-
-.mobile-offcanvas {
-  visibility: visible;
-  transform:translateY(-100%);
-  border-radius:0; 
-  display:block;
-  position: fixed;
-  top: 0; left: 0;
-  z-index: 1200;
-  width: 100%;
-  height: 100%;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  transition: visibility .2s ease-in-out, transform .2s ease-in-out;
-}
-
-.mobile-offcanvas.show {
-  visibility: visible;
-  transform: translateX(0);
-}
-
 .navbar-toggler {
   border: none;
 }
 
 .bg-light {
-  background-color: white !important;
+  background-color: transparent !important;
+}
+
+.offcanvas-header{ display:block; }
+ 
+.mobile-offcanvas{
+  visibility: hidden;
+  transform: translateY(100%);
+  border-radius: 0;
+  display: block;
+  position: fixed;
+  top: 0; left:0;
+  border-top: 3px solid white;
+  padding-top: 8px;
+  width: 50%;
+  height: 100%;
+  z-index: 1200;
+  width: 80%;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  transition: visibility .2s ease-in-out, transform .2s ease-in-out;
+  padding-top: 70px;
+}
+
+.mobile-offcanvas.show{
+  visibility: visible;
+  transform: translateY(0);
 }
