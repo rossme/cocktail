@@ -12,4 +12,3 @@ ingredients["drinks"].each do |ingredient|
   puts "create #{ing.name}"
 end
 puts "SEEDING COMPLETED"
-
