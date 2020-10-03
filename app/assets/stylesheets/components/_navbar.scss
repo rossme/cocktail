@@ -15,12 +15,12 @@
   display: block;
   position: fixed;
   top: 0; left:0;
-  border-top: 3px solid white;
+  border-top: 6px solid white;
   padding-top: 8px;
-  width: 50%;
+  width: 80%;
   height: 100%;
   z-index: 1200;
-  width: 80%;
+  width: 70%;
   overflow-y: hidden;
   overflow-x: scroll;
   transition: visibility .2s ease-in-out, transform .2s ease-in-out;
