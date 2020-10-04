@@ -1,15 +1,10 @@
-<nav class="navbar navbar-light bg-light">
+<nav class="navbar navbar-light bg-light m-2">
     <a class="navbar-brand pb-2" href="/">
         <img src="https://res.cloudinary.com/djnfnwxgu/image/upload/v1601766852/le_cocktail/cocktail_logo_white_psbnxa.svg" height="26" alt="Le Cocktail">
     </a>
-    <div id="navbar_main" class="mobile-offcanvas navbar navbar-light bg-light">
-        <p id="p-menu-top"><%= link_to "Cocktail List", cocktails_path, class: "h5" %></p>
-        <p><%= link_to "Add Cocktail", new_cocktail_path, class: "h5" %></p>
-        <p><%= link_to "About", cocktails_path, class: "h5" %></p>
-        <div class="social-icons">
-            <a class="fab fa-linkedin fa-lg" style="color: white; font-size: 2em;" href="https://www.linkedin.com/in/rossbuddie/" target="_blank"></a>
-            <a class="fab fa-github-square fa-lg" style="color: white; font-size: 2em;" href="https://www.github.com/rossme" target="_blank"></a>
-        </div>
+    <div id="navbar_main" class="mobile-offcanvas navbar navbar-light bg-light pr-4">
+        <p><%= link_to "COCKTAILS", cocktails_path, class: "h6" %></p>
+        <p><%= link_to "ADD COCKTAIL", new_cocktail_path, class: "h6" %></p>
     </div>
     <button class="navbar-toggler" type="button" data-trigger="#navbar_main" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-cocktail fa-2x" style="color: white; font-size: 1.5em;"></i>
