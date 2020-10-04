@@ -11,26 +11,28 @@
   padding: 10px 0px;
 }
 
-.offcanvas-header{ display:block; }
+.offcanvas-header {
+  display:block;
+}
  
-.mobile-offcanvas{
+.mobile-offcanvas {
   visibility: hidden;
   transform: translateY(100%);
   border-radius: 0;
   display: block;
   position: fixed;
   top: 0; left:0;
-  border-top: 4px solid white;
-  padding-top: 64px;
-  height: 100%;
+  margin-top: 64px;
   z-index: 1200;
-  width: 70%;
+  height: 100%;
+  width: 100%;
   overflow-y: hidden;
   overflow-x: scroll;
   transition: visibility .2s ease-in-out, transform .2s ease-in-out;
+  text-align: right;
 }
 
-.mobile-offcanvas.show{
+.mobile-offcanvas.show {
   visibility: visible;
   transform: translateY(0);
 }
