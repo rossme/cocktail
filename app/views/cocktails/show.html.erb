@@ -1,20 +1,34 @@
+
+
 <div class="container">
   <div class="row">
     <div class="col">
       <div class="cocktail-list p-2">
-        <h5><strong><%= @cocktail.name %></strong></h5>
-          <% @cocktail.doses.each do |dose| %>
+      <!-- COCKTAIL NAME -->
+
+        <h5><%= @cocktail.name %></h5>
+        <h5><%= image_tag @cocktail.url, style: "width: 100px;" %></h5>
+        <!-- LINK TO ADD INGREDIENTS DOSE -->
+        <%= link_to "ADD INGREDIENTS", new_cocktail_dose_path(@cocktail.id), class: "h6" %>
+        <% @cocktail.doses.each do |dose| %>
             <tr>
               <td><%= dose.ingredient.name %></td>
               <td><%= dose.description %></td>
               <td>
-                <%= link_to dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } do %>
-                  <i class="fa fa-trash destroy_dose"></i>
-                <% end %>
+              <!-- LINK TO DELETE INGREDIENTS DOSE -->
+              <%= link_to dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } do %>
+                <i class="fa fa-trash destroy_dose"></i>
+              <% end %>
               </td>
             </tr>
           <% end %>
           </tbody>
+          <!-- DELETE COCKTAIL -->
+          <p><%= link_to 'Delete', cocktail_path(@cocktail),
+              method: :delete,
+              data: { confirm: 'Are you sure?' },
+              class: "btn btn-primary" %></p>
+          <!-- LINK TO ADD AND LIST -->
           <p><%= link_to "Add Another", new_cocktail_path %></p>
           <p><%= link_to "Cocktail List", cocktails_path %></p>
       </div>
@@ -36,7 +50,7 @@
   <div class="card-body">
     <h5 class="card-title"><%= @cocktail.name %></h5>
     <% @cocktail.doses.each do |dose| %>
-    <p class="card-text"><%= dose.ingredient.name %><br><%= dose.ingredient.name %></p>
+    <p class="card-text"><%= dose.ingredient.name %><br><%= dose.description %></p>
     <% end %>
     <p><%= link_to "Add Cocktail", new_cocktail_path, class: "btn btn-primary" %></p>
     <p><%= link_to "Cocktail List", cocktails_path, class: "btn btn-primary" %></p>

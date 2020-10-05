@@ -5,7 +5,7 @@
         <% @cocktails.each do |cocktail| %>
           <div class="h5" style="padding-top: 20px;">
             <%= link_to cocktail.name.split.map(&:capitalize).join(' '), cocktail_path(cocktail)%>
-          </div>
+            </div>
         <% end %>
       </div>
     </div>
