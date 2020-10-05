@@ -1,11 +1,30 @@
+<!-- NEW DETAILS -->
+<div class="card mb-3 bg-white" style="width: 14rem;">
+  <img class="card-img-top" src="<%= @cocktail.url %>" alt="<%= @cocktail.name %>">
+  <div class="card-body">
+    <h5 class="card-title"><%= @cocktail.name %></h5>
+    <% @cocktail.doses.each do |dose| %>
+    <h6 class="card-subtitle mb-2 text-muted"><%= dose.ingredient.name %></h6>
+    <h6 class="card-subtitle mb-2 text-muted"><%= dose.description %></h6>
+    <%= link_to dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } do %>
+      <h6>Delete ingredient</h6>
+    <% end %>
+    <% end %>
+    <%= link_to "Add ingredient", new_cocktail_dose_path(@cocktail.id), class: "h6" %>
 
 
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <p class="card-subtitle mb-2 text-muted"><%= link_to "New Cocktail", new_cocktail_path %></p>
+      <p class="card-subtitle mb-2 text-muted"><%= link_to "All Cocktail", cocktails_path %></p>
+    </div>
+</div>
+
+<!-- COCKTAIL DETAILS -->
 <div class="container">
   <div class="row">
     <div class="col">
       <div class="cocktail-list p-2">
-      <!-- COCKTAIL NAME -->
-
+        <!-- COCKTAIL NAME -->
         <h5><%= @cocktail.name %></h5>
         <h5><%= image_tag @cocktail.url, style: "width: 100px;" %></h5>
         <!-- LINK TO ADD INGREDIENTS DOSE -->
@@ -34,25 +53,4 @@
       </div>
     </div>
   </div>
-</div>
-
-<!-- COCKTAIL DETAILS -->
-
-<p><%= link_to 'Delete', cocktail_path(@cocktail),
-              method: :delete,
-              data: { confirm: 'Are you sure?' },
-              class: "btn btn-primary" %></p>
-<p><%= link_to "Add Cocktail", new_cocktail_path, class: "btn btn-primary" %></p>
-<p><%= link_to "Cocktail List", cocktails_path, class: "btn btn-primary" %></p>
-
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title"><%= @cocktail.name %></h5>
-    <% @cocktail.doses.each do |dose| %>
-    <p class="card-text"><%= dose.ingredient.name %><br><%= dose.description %></p>
-    <% end %>
-    <p><%= link_to "Add Cocktail", new_cocktail_path, class: "btn btn-primary" %></p>
-    <p><%= link_to "Cocktail List", cocktails_path, class: "btn btn-primary" %></p>
-    </div>
 </div>
