@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "node server.js"
+  },
   "name": "rails_mister_cocktail",
   "private": true,
   "dependencies": {
@@ -15,7 +18,5 @@
   "version": "0.1.0",
   "devDependencies": {
     "webpack-dev-server": "^3.11.0"
-  },"scripts": {
-    "start": "node index.js"
   }
 }
