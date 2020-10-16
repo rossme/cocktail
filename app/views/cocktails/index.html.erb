@@ -3,10 +3,12 @@
     <div class="col">
       <div class="cocktail-list p-2">
         <% @cocktails.each do |cocktail| %>
-          <div class="h5" style="padding-top: 20px;">
+          <div class="h5 mt-4">
             <%= link_to cocktail.name.split.map(&:capitalize).join(' '), cocktail_path(cocktail)%>
             </div>
         <% end %>
+        <p><%= link_to "Add Cocktail", new_cocktail_path, class: "btn btn-primary p-1 mt-3" %></p>
+
       </div>
     </div>
   </div>
